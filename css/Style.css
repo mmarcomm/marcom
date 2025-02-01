@@ -1,0 +1,393 @@
+@charset "UTF-8";
+/* Definir o tipo de letra, de onde são as margens, o estilo e o peso do tipo de letra */
+
+body {
+	font-family: Halyard Text Regular, halyard-text, halyard-display;
+	background-color: #f2f2f2;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	font-style: normal;
+	font-weight: 200;
+}
+header {
+	width: 100%;
+	height: 600px;
+	background-color: #52bad5;
+	border-bottom: 1px solid #2C9AB7;
+}
+/* Colocar a imagem de fundo, com um efeito */
+.banner {
+	width: 100%;
+	height: 1000px;
+	background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url("../images/bless.jpg");
+	background-size: cover;
+	background-position: center;
+}
+/* Estilo da Barra de navegação */
+.square {
+	align-items: center;
+	justify-content: center;
+	position: sticky;
+	height: 70px;
+	width: 60%;
+	z-index: 1;
+	background-color: #ffffff;
+	top: 20px;
+	left: 17%;
+	border-radius: 35px;
+}
+/* Cenas potencias a alterar - Multiple Positioning: You've defined position: sticky; and position: fixed; simultaneously for certain classes (like .navbar). This will not work as intended. You should decide between them. */
+.navbar {
+	width: 67%;
+	padding: 16px 0px 16px 0px;
+	display: flex;
+	justify-content: flex-end;
+	position: sticky;
+	position: fixed;
+	top: 0px;
+  	background-color: transparent;
+ 	z-index: 2;
+}
+
+.menubutton {
+  display: none;
+}
+
+/* Apresentação do logo e as suas dimensões juntamente com o lado onde se organiza o alinhamento*/
+
+.logo {
+	padding: 0px 0px 0px 0px;
+	justify-content: flex-start;
+	position: sticky;
+	position:relative;
+  	top: 0;
+  	background-color: transparent;
+ 	z-index: 2;
+	width: 120px;
+}
+.icon{
+	padding: 12px 0px 0px 0px;
+	display: flex;
+	width: 30px;
+	height: 30px;
+  	top: 0;
+  	display: none;
+  	background-color: transparent;
+ 	z-index: 1;
+	float: left;
+
+}
+
+/* Apresenta a cor do texto */
+.navbar ul li{
+	list-style: initial;
+	display: inline-block;
+	margin: 8px 21px;
+	position: relative;
+}
+
+/* Apresenta a cor do texto e outras definições */
+.navbar ul li a{
+	text-decoration: none;
+	color: #000;
+	text-transform: uppercase;
+	font-size: 20px;
+}
+
+/* Faz uma transição do sublinhado aparecer da esquerda para a direita a 100% */
+.navbar ul li::after{
+	content: '';
+	height: 2px;
+	width: 0%;   
+	background: #8AA4FF;
+	display: block;
+	margin:auto;
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	transition: 0.5s;
+
+}
+
+/* Faz uma transição do sublinhado aparecer da esquerda para a direita a 100% */
+.navbar ul li:hover::after{
+	width: 100%;
+	background: #000;
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+}
+
+nav {
+	float: right;
+	width: 70%;
+	text-align: right;
+	margin-right: 25px;
+}
+header nav ul {
+	list-style: none;
+	float: right;
+}
+nav ul li {
+	float: middle;
+	color: #FFFFFF;
+	font-size: 14px;
+	text-align: left;
+	margin-right: 25px;
+	letter-spacing: 2px;
+	font-weight: bold;
+	transition: all 0.3s linear;
+}
+ul li a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+ul li:hover a {
+	color: #8AA4FF;
+}
+
+.text_box{
+	position: absolute;
+	top: 50%;
+	text-align: center;
+	color: #ffffff;
+/* Associação */	
+}
+
+/* Escolher o tipo de letra,  */
+.content {
+	width: 100%;
+	position: absolute;
+	top: 30%;
+	text-align: center;
+	color: #fff;
+	height: 1000px;
+	
+/* Associação */	
+}
+
+
+.content h1{
+	margin-left: 20%;	
+	margin-right: 20%;
+	font-size:70px;
+	margin-top: 128px;
+}
+/* peso da font: (400 é o valor padrão, negrito é equivalente a 700), o tamanho e  */	
+.content p{
+	font-weight: 100;
+	font-size: 16px;
+	margin-top: 64px;
+	margin-left: 20%;	
+	margin-right: 20%;
+}
+/*  */
+
+.button{
+	width: 200px;
+	padding: 15px 0;
+	text-align: center;
+	margin: 24px 8px;
+	border-radius: 25px;
+	font-weight: bold;
+	border: 2px solid #009688;
+	background: transparent;
+	color: #fff;
+	cursor: pointer;
+	position: relative;	
+	overflow: hidden;
+}
+
+.span{
+	background: #009688;
+	height: 100%;
+	width: 0%;
+	border-radius: 1px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	/* "send to back" */
+	z-index: -1;
+	transition: 0.4s;
+}
+
+.button:hover span{
+	width: 100%;
+}
+
+.button:hover{
+	transition: 0.6s;
+	border: 2px solid #fff;
+}
+
+.button2{
+	width: 200px;
+	padding: 15px 0;
+	text-align: center;
+	margin: 20px 10px;
+	border-radius: 25px;
+	font-weight: bold;
+	border: 2px solid #009688;
+	background: transparent;
+	color: #fff;
+	cursor: pointer;
+	position: relative;	
+	overflow: hidden;
+}
+.span2{
+	background: #009688;
+	height: 100%;
+	width: 100%;
+	border-radius: 25px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	/* "send to back" */
+	z-index: -1;
+	transition: 0.5s;
+}
+
+.button2:hover span{
+	transition: 0.2s;
+	background: #fff;
+	color: #000;
+}
+
+.button2:hover{
+	transition: 0.2s;
+	border: 2px solid #009688;
+	color: #009688;
+}
+
+/* Faz uma transição do sublinhado aparecer da esquerda para a direita a 100% */
+.text_column_middle {
+    /* defenir as margens */
+    margin-top: 32px;
+	margin-left: 20%;
+	margin-right: 20%;
+
+/* Center the container horizontally */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Colunas tripartidas, com um espaçamento de */
+
+.text_column_tripartite {
+    column-count: 4;
+	column-gap: 40px;
+	column-width: 30%;
+}
+
+.hero-btn{
+	display: inline-block;
+	text-decoration: none;
+	color: #fff;
+	border: 1px solid #fff;
+	padding: 12px 34px;
+	font-size: 13px;
+	background: transparent;
+	position: relative;
+	cursor: pointer;
+	border-radius: 25px;
+}
+
+.hero-btn:hover{
+	border-radius: 25px;
+	border: 1px solid #8AA4FF;
+	background: #8AA4FF;
+	transition: 0.3s;
+}
+
+@media(max-width: 700px){
+/* 700 PIXELS                                           STOP HERE 700PX */
+.content {
+
+
+}
+
+.logo {
+  	top: 0px;
+  	padding: 0px 0px 0px 22%;
+ 	z-index: 3;
+	width: 80px;
+}
+
+	.content h1{
+	font-size:40px;
+
+}
+
+/* peso da font: (400 é o valor padrão, negrito é equivalente a 700), o tamanho e  */	
+.content p{
+	font-weight: 100;
+	font-size: 12px;
+}
+
+.navbar ul li{
+	display: block;
+}
+
+.navbar{
+	background: #fff;
+	flex-direction: column;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	height: 100vh;
+	width: 40vh;
+	text-align: left;
+	z-index: 4;
+}
+
+nav ul li {
+	color: #FFFFFF;
+	font-size: 7px;
+	text-align: left;
+	letter-spacing: 2px;
+	font-weight: bold;
+}
+
+.menubutton{
+	color: #000;
+	border: 2px solid #ffffff;
+	margin-left: 13%; 
+	font-size: 13px;
+	background: transparent;
+	cursor: pointer;
+	border-radius: 10px;
+	height: 20px;
+	width: 20px;
+	z-index: 5;
+}
+
+.menubutton img {
+  /* Add your CSS styles here */
+	width: 22px;
+}
+
+.menubutton {
+	width: 70px;
+	height: 45px;
+	display: inline;
+}
+
+.square{
+	display: inline;
+}
+/* make it dissapear
+
+.navbar.hidden > *:not(.menubutton) {
+	display: none;
+}
+ */
+.navbar.hidden {
+	display: none;
+}
+
+@media(max-width: 1400px){
+	
+}
