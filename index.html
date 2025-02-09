@@ -11,39 +11,17 @@
 		<link rel="icon" href="SGVs/M.svg" type="image/x-icon" />
 	</head>
 	<body>
-			<header>
-				<nav>
-				<div class="banner">
-					<div class="menubox">
-						<div class="square">
-							<div class="navbar">
-								<div class="logo-container">
-									<a href="index.html">
-										<img src="SGVs/logo5.svg" alt="Studio313 logo" class="logo"/>
-									</a>
-								</div>
-							<div class="menu__toggle">
-								
-								<!-- Hidden Checkbox -->
-								<input type="checkbox" id="menuToggleCheckbox" class="toggle-checkbox" />
-								<!-- Label acting as a button -->
-								<label for="menuToggleCheckbox" class="menu-button" aria-label="Toggle Navigation">
-									<img src="SGVs/menu.svg" alt="Menu Icon" class="hamburger-icon">
-								</label>
-								<!-- Menu items -->
-								<ul id="navgatorList" class="menu__links">
-									<li><a href="#obrasSectionOffset" class="activemenu">Obras</a></li>
-									<li><a href="Exposições.html" >Exposições</a></li>
-									<li><a href="Sobre.html">Sobre</a></li>
-									<li><a href="Conectar.html">Conectar</a></li>
-								</ul>
-							</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</nav>
-			</header>
+			<header id="header-placeholder"></header>
+			<script>
+				document.addEventListener("DOMContentLoaded", function() {
+					fetch("header.html")
+						.then(response => response.text())
+						.then(data => {
+							document.getElementById("header-placeholder").innerHTML = data;
+						});
+				});
+			</script>
+			
 		<div class="showcase">
 			<div class="profile">
 				<img src="imagens/mari.JPG" alt="Mari" class="profileimage">
@@ -131,6 +109,18 @@
 	  
 	</div>
 </div>
+<div id="footer-placeholder"></div>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+		fetch("footer.html")
+			.then(response => response.text())
+			.then(data => {
+				document.getElementById("footer-placeholder").innerHTML = data;
+			});
+	});
+</script>
+
 <script>
 document.addEventListener("DOMContentLoaded", function() {
 	 // Get all collapsible buttons
@@ -181,28 +171,6 @@ function scrollToButton() {
     }
 }
 	</script>
-
-<script>
-	function openNav() {
-		document.getElementById("myNav").style.height = "100%";
-	}
-
-	function closeNav() {
-		document.getElementById("myNav").style.height = "0%";
-	}
-</script>
-
-<div id="footer-placeholder"></div>
-
-<script>
-	document.addEventListener("DOMContentLoaded", function() {
-		fetch("footer.html")
-			.then(response => response.text())
-			.then(data => {
-				document.getElementById("footer-placeholder").innerHTML = data;
-			});
-	});
-</script>
 
 	</body>			
 

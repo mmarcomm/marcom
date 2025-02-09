@@ -1,0 +1,1956 @@
+@charset "UTF-8";
+
+/* Definir o tipo de letra, de onde são as margens, o estilo e o peso do tipo de letra */
+:root {
+	--primary-color: #3FB498;
+	/*EX background-color: var(--primary-color); var(--secoundary-color); var(--tertiary-color); var(--quarternary-color); var(--fith-color); var(--sixth-color);*/
+	--secoundary-color: #212427;
+	/* black for text */
+	--tertiary-color: #F4F4F4;
+	/*  */
+	--quarternary-color: #009270;
+	/* hover*/
+	--fith-color: #9AD4C6;
+	/* hover*/
+	--sixth-color: #EAEAEA;
+}
+
+
+body {
+	font-family: Halyard Text Regular, halyard-text, halyard-display;
+	background-color: var(--tertiary-color);
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	font-style: normal;
+	font-weight: 200;
+}
+
+header {
+	width: 100%;
+	height: 110px;
+	background-color: var(--primary-color);
+}
+
+p {
+	/*color: white;*/
+}
+
+p1 {
+	font-weight: 100;
+	font-size: 16px;
+	font-weight: 100;
+	text-align: left;
+}
+
+h1 {
+	color: var(--quarternary-color);
+	text-align: left;
+	font-size: 70px;
+	margin: 0 0 42px 0;
+}
+
+h2 {
+	line-height: 0;
+	margin: 42px 0px 24px 0px;
+	font-weight: 500;
+}
+
+h4 {
+	font-size: 32px;
+	line-height: normal;
+	font-weight: 500;
+	margin: 12px 12px 32px 12px;
+}
+
+p4 {
+	line-height: normal;
+	font-weight: lighter;
+	margin: 12px 0 32px 12px;
+}
+
+
+/*     */
+.banner {
+	width: 100%;
+	height: 1000px;
+}
+
+.menubox {
+	display: flex;
+	justify-content: center;
+}
+
+.square {
+	display: flex;
+	justify-content: center;
+	position: fixed;
+	margin: 0 auto;
+	height: 70px;
+	width: 80%;
+	z-index: 1;
+	background-color: white;
+	top: 20px;
+	border-radius: 35px;
+}
+
+/* Cenas potencias a alterar - Multiple Positioning: You've defined position: sticky; and position: fixed; simultaneously for certain classes (like .navbar). This will not work as intended. You should decide between them. */
+.navbar {
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	top: 0px;
+	background-color: transparent;
+	z-index: 2;
+	padding: 0px 10% 0px 10%;
+}
+
+.logo-container {
+	right: 0;
+	/* Aligns the element to the right */
+	padding: 0;
+	margin-top: 22px;
+	background-color: transparent;
+	justify-content: center;
+	align-items: center;
+	z-index: 2;
+	width: 240px;
+	/* Maintains the specified width */
+}
+
+.logo {
+	width: 240px;
+	z-index: 1;
+}
+
+
+
+
+/* Collapsible is the Open */
+.collapsible {
+	background-color: var(--primary-color);
+	color: white;
+	cursor: pointer;
+	padding: 12px 18px 12px 48px;
+	width: 100%;
+	border: none;
+	text-align: left;
+	font-size: 15px;
+	margin-top: 32px;
+}
+
+.active,
+.collapsible:hover {
+	background-color: var(--quarternary-color);
+
+
+}
+
+.activated {
+	background-color: white;
+	color: var(--secoundary-color);
+}
+
+.activemenu {
+	font-weight: 400;
+	color: var(--primary-color) !important;
+}
+
+.content {
+	display: block;
+	/* Initially visible */
+	overflow: hidden;
+	background-color: #f1f1f1;
+	opacity: 1;
+	/* Start with opacity 1 for fade effect */
+	transition: opacity 0.5s ease, max-height 0.5s ease;
+	/* Transition for opacity and height */
+	max-height: 0;
+	/* Start with height 0 */
+	visibility: hidden;
+	/* Initially hidden */
+}
+
+.content.show {
+	visibility: visible;
+	/* Make it visible when shown */
+	opacity: 1;
+	/* Fully visible */
+	max-height: 1000px;
+	/* Allow height to adjust */
+}
+
+
+.icon {
+	padding: 12px 0px 0px 0px;
+	display: flex;
+	width: 30px;
+	height: 30px;
+	top: 0;
+	display: none;
+	background-color: transparent;
+	z-index: 1;
+	float: left;
+
+}
+
+ul {
+	margin-top: 14px;
+	margin-bottom: 0px;
+
+}
+
+/* Apresenta a cor do texto */
+.navbar ul li {
+	list-style: initial;
+	display: inline-block;
+	margin: 8px 21px;
+	position: relative;
+}
+
+/* Apresenta a cor do texto e outras definições */
+.navbar ul li a {
+	text-decoration: none;
+	color: #212427;
+	text-transform: uppercase;
+	font-size: 20px;
+	transition: color 0.25s ease;
+}
+
+/* Faz uma transição do sublinhado aparecer da esquerda para a direita a 100% */
+.navbar ul li::after {
+	content: '';
+	height: 2px;
+	width: 0%;
+	background: var(--primary-color);
+	display: block;
+	margin: auto;
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	transition: 0.5s;
+
+}
+
+/* Faz uma transição do sublinhado aparecer da esquerda para a direita a 100% */
+.navbar ul li:hover::after {
+	width: 100%;
+	background: #000;
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+}
+
+nav {
+	width: 100%;
+	text-align: right;
+	margin-right: 25px;
+}
+
+header nav ul {
+	list-style: none;
+	float: right;
+}
+
+nav ul li {
+	float: middle;
+	color: #FFFFFF;
+	font-size: 14px;
+	text-align: left;
+	margin-right: 25px;
+	letter-spacing: 2px;
+	font-weight: bold;
+	transition: all 0.3s linear;
+}
+
+ul li a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+ul li:hover a {
+	color: var(--primary-color);
+}
+
+
+/* Index.html first part */
+
+.showcase {
+	display: flex;
+	height: 400px;
+	color: var(--secoundary-color);
+}
+
+.text_box {
+	width: 50%;
+	min-width: 550px;
+	padding: 24px 10% 24px 24px;
+	margin: 32px 0 0 0;
+	box-sizing: border-box;
+}
+
+
+.profile {
+	margin: 32px 0 0 0;
+	align-items: center;
+	padding: 24px 42px 24px	10%;
+	display: flex;
+}
+
+.profileimage {
+	max-width: 500px;
+}
+
+
+
+
+
+/*  */
+.Buttonmiddle {
+	/* defenir as margens */
+	margin-top: 32px;
+	margin-left: 20%;
+	margin-right: 20%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.button {
+	width: 200px;
+	padding: 15px 0;
+	text-align: center;
+	margin: 24px 8px;
+	border-radius: 25px;
+	font-weight: bold;
+	border: 2px solid var(--primary-color);
+	background: transparent;
+	color: var(--primary-color);
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+}
+
+.span {
+	background: #009688;
+	height: 100%;
+	width: 0%;
+	border-radius: 1px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	/* "send to back" */
+	z-index: -1;
+	transition: 0.4s;
+}
+
+.button:hover span {
+	width: 100%;
+}
+
+.button:hover {
+	transition: 0.6s;
+	border: 2px solid #fff;
+}
+
+.button2 {
+	width: 200px;
+	padding: 15px 0;
+	text-align: center;
+	margin: 20px 10px;
+	border-radius: 25px;
+	font-weight: bold;
+	border: 2px solid #009688;
+	background: transparent;
+	color: #fff;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+}
+
+.span2 {
+	background: #009688;
+	height: 100%;
+	width: 100%;
+	border-radius: 25px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	/* "send to back" */
+	z-index: -1;
+	transition: 0.5s;
+}
+
+.button2:hover span {
+	transition: 0.2s;
+	background: #fff;
+	color: #000;
+}
+
+.button2:hover {
+	transition: 0.2s;
+	border: 2px solid var(--primary-color);
+	color: var(--primary-color);
+}
+
+
+
+
+/* Create three equal columns that floats next to each other */
+.column {
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	width: 350px;
+	padding: 18px;
+	height: 620px;
+	/* Should be removed. Only for demonstration */
+	margin-top: 32px;
+}
+
+.column1 {
+	background-color: white;
+	color: var(--secoundary-color);
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	max-width: 350px;
+	min-width: 300px;
+	padding: 18px;
+	height: 620px;
+	/* Should be removed. Only for demonstration */
+	margin: 32px;
+	transition: transform 0.1s;
+	transition: box-shadow 2000 ms;
+}
+
+.column1:hover {
+	transform: translatey(-0.4rem) scaleX(1);
+	box-shadow: 0px 0.4rem 0.5px var(--secoundary-color);
+}
+
+.column1:hover .photohorizontal {
+	filter: brightness(110%);
+	/* Set the desired opacity on hover */
+	transition: brightness 0.1s;
+	/* Add transition for smooth effect */
+}
+
+
+
+.column2 {
+	background-color: #fff;
+	border-radius: 8px;
+	line-height: 12px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	max-width: 500px;
+	min-width: 300px;
+	padding: 18px;
+	height: 480px;
+	margin: 32px;
+}
+
+.column2:hover {
+	transform: translatey(-0.4rem) scaleX(1);
+	box-shadow: 0px 0.4rem 0.5px var(--secoundary-color);
+}
+
+.column2:hover .photovertical {
+	filter: brightness(110%);
+	/* Set the desired opacity on hover */
+	transition: brightness 0.1s;
+	/* Add transition for smooth effect */
+}
+
+
+.column3 {
+	background-color: #fff;
+	border-radius: 8px;
+	line-height: 12px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	width: 450px;
+	padding: 18px;
+	height: 620px;
+	/* Should be removed. Only for demonstration */
+	margin: 32px;
+}
+
+.column3:hover {
+	transform: translatey(-0.4rem) scaleX(1);
+	box-shadow: 0px 0.4rem 0.5px var(--secoundary-color);
+}
+
+.column3:hover .photovertical {
+	filter: brightness(110%);
+	/* Set the desired opacity on hover */
+	transition: brightness 0.1s;
+	/* Add transition for smooth effect */
+}
+
+
+.column4 {
+	background-color: #fff;
+	color: var(--secoundary-color);
+	border-radius: 8px;
+	display: flex;
+	flex-direction: row;
+	align-items:start;
+	min-width: 300px;
+    padding: 18px;
+    margin: 32px 10% 32px 10%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.column4:hover {
+	transform: translatey(-0.4rem) scaleX(1);
+	box-shadow: 0px 0.4rem 0.5px var(--secoundary-color);
+}
+
+.column4:hover .photoside {
+	filter: brightness(110%);
+	/* Set the desired opacity on hover */
+	transition: brightness 0.1s;
+	/* Add transition for smooth effect */
+}
+
+
+h3 {
+	font-size: 32px;
+	font-weight: 300;
+	line-height: 24px;
+	margin: 0px 0px 28px 0px;
+}
+
+
+.row {
+	background-color: #f2f2f2;
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	align-content: space-evenly;
+	margin-bottom: 32px;
+}
+
+.margin {
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+.photovertical {
+	padding: none;
+	border: none;
+	max-width: 500px;
+	min-width: none;
+}
+
+.button {}
+
+.buttt {
+	padding: none;
+	border: none;
+	border-radius: none;
+}
+
+.photoside {
+	max-width: 50%;
+    height: auto;
+    margin-right: 20px;
+    object-fit: cover;
+	margin: 12px 12px 12px 12px;
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.banner2 {
+	width: 100%;
+	height: 1000px;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../images/bless.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+/* Hero Button Products */
+.hero-btn {
+	display: inline-block;
+	text-decoration: none;
+	color: var(--primary-color);
+	border: 2px solid var(--primary-color);
+	padding: 12px 34px;
+	font-size: 13px;
+	background: transparent;
+	position: relative;
+	cursor: pointer;
+	border-radius: 25px;
+}
+
+.hero-btn:hover {
+	border-radius: 25px;
+	border: 2px solid var(--primary-color);
+	background: var(--primary-color);
+	color: #fff;
+	transition: 0.3s;
+}
+
+.hero-btn {
+	transition: background-color 0.2s ease-in-out, color 0.09s ease-in-out;
+}
+
+
+/* Products elements */
+.ElementsProduct {
+	margin: 0 auto;
+	color: var(--tertiary-color);
+	height: 900px;
+	display: block;
+}
+
+.TextProduct {
+	color: var(--secoundary-color);
+	margin-left: 48px;
+	font-weight: 100;
+	text-align: left;
+	font-size: 16px;
+	margin-top: 48px;
+	margin-right: 150px;
+}
+
+/*columnRow */
+
+.rowProduct {
+	display: flex;
+	/*gap:10px;*/
+}
+
+.columnProduct {
+	background-color: #F4F4F4;
+	padding: 0 0;
+}
+
+.small {
+	flex: 0;
+}
+
+.images {
+	padding-top: 24px;
+	min-width: 549px;
+}
+
+.SectionOffset {
+	position: relative;
+	height: 84px;
+}
+
+.ProfileImageProduct {
+	margin-top: 48px;
+	margin-left: 150px;
+	max-width: 400px;
+	/* Adjust size as needed */
+	min-width: 200px;
+	border-radius: 8px 8px 0px 0px;
+	transition: opacity 0.3s ease;
+}
+
+
+.ImagemainProduct {
+	margin-left: 150px;
+	width: 100px;
+	margin-right: 46px;
+	border-radius: 0px 0px 8px 8px;
+	transition: transform 0.1s;
+	transition: box-shadow 2000 ms;
+	transition: opacity 0.3s ease;
+	cursor: pointer;
+}
+
+.ImagemainProduct:hover {
+	transform: translatey(-0.3rem) scaleX(1);
+	box-shadow: 0px 0.4rem 0.5px var(--secoundary-color);
+}
+
+
+.Image2Product {
+	margin-right: 46px;
+	max-width: 100px;
+	/* Adjust size as needed */
+	min-width: 20px;
+	border-radius: 0px 0px 8px 8px;
+	transition: transform 0.1s;
+	transition: box-shadow 2000 ms;
+	cursor: pointer;
+}
+
+.Image2Product:hover {
+	transform: translatey(-0.4rem) scaleX(1);
+	box-shadow: 0px 0.3rem 0.5px var(--secoundary-color);
+}
+
+
+.Image3Product {
+	max-width: 100px;
+	/* Adjust size as needed */
+	min-width: 20px;
+	border-radius: 0px 0px 8px 8px;
+	transition: transform 0.1s;
+	transition: box-shadow 2000 ms;
+	cursor: pointer;
+}
+
+.Image3Product:hover {
+	transform: translatey(-0.4rem) scaleX(1);
+	box-shadow: 0px 0.4rem 0.5px var(--secoundary-color);
+}
+
+.interested {
+	margin-top: 12px;
+	margin-left: 47px;
+	font-size: 16px;
+	max-width: 1200px;
+	min-width: 200px;
+	color: var(--secoundary-color);
+
+}
+
+.middle {
+	float: middle;
+	align-items: center;
+	justify-content: center;
+	color: var(--secoundary-color);
+}
+
+.titlebig {
+	font-family: "degular-text", sans-serif;
+	font-weight: 600;
+	font-size: 24pt;
+	margin: 0 0 0 28px;
+}
+
+.black {
+	color: var(--primary-color);
+}
+
+
+
+.form {
+	display: flex;
+	justify-content: center;
+	height: 600px;
+}
+
+
+/* Container styling */
+
+.form-container {
+	max-width: 850px;
+	min-width: 500px;
+	height: 430px;
+	padding: 24px 28px 24px 24px;
+	border-radius: 8px;
+	color: var(--secoundary-color);
+	background-color: white;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* General form group styling */
+.form-group {
+	margin-bottom: 20px;
+	width: 100%;
+	float: left;
+	margin-left: 0;
+	display: block;
+}
+
+.form-group-left {
+	margin-bottom: 20px;
+	padding-right: 2.8%;
+	width: 54%;
+	clear: none;
+	float: left;
+	margin-left: 0;
+	display: block;
+}
+
+.form-group-right {
+	margin-bottom: 20px;
+	width: 43%;
+	clear: none;
+	float: left;
+	margin-left: 0;
+	display: block;
+}
+
+
+.form-text {
+	display: block;
+	margin-bottom: 5px;
+}
+
+/* Input fields */
+.form-input {
+	width: 100%;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	font-size: 14px;
+
+}
+
+.form-link {
+	font-size: 14px;
+}
+
+.form-link:hover {
+	color: var(--fith-color);
+	/*text-underline-position: ;*/
+}
+
+
+
+
+/* Textarea styling */
+.form-textbox {
+	width: 100%;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	font-size: 15px;
+	font-family: Halyard Text Regular, halyard-text, halyard-display;
+	font-weight: 100;
+	resize: vertical;
+	min-height: 100px;
+	max-height: 300px;
+	background-image: linear-gradient(-45deg,
+			var(--sixth-color) 20px,
+			transparent 20px);
+}
+
+/* Checkbox container */
+.form-group-checkbox {
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	margin-bottom: 12px;
+	margin-right: 18px;
+	clear: none;
+	float: left;
+	margin-left: 0;
+	display: block;
+}
+
+.checkbox {
+	margin-right: 4px;
+	width: 12px;
+	height: 12px;
+	border: 1px solid var(--corpri1);
+	background: transparent;
+}
+
+.checkbox-label a {
+	color: var(--primary-color);
+}
+
+/* Submit button styling */
+.submit-button {
+	width: 100%;
+	padding: 12px;
+	background-color: var(--primary-color);
+	color: white;
+	border: none;
+	border-radius: 4px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	letter-spacing: 1px;
+	margin: 12px 0px 0px 0px;
+}
+
+.submit-button:hover {
+	background-color: var(--quarternary-color);
+}
+
+.submit-button:focus {
+	outline: 2px solid #333;
+	outline-offset: 2px;
+}
+
+
+
+
+
+
+
+
+
+.formbutton {
+	width: 100%;
+	padding: 10px;
+	background-color: var(--primary-color);
+	color: white;
+	border: none;
+	border-radius: 4px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+
+
+
+.divdefault {
+	position: relative;
+	float: left;
+	width: 100%;
+	clear: both;
+}
+
+.colunas60contact,
+.colunas60 {
+	clear: both;
+	float: left;
+	margin-left: 0;
+	width: 100%;
+	display: block;
+}
+
+.margininputleft {
+	padding-right: 5px;
+	box-sizing: border-box;
+}
+
+.tablecopy.letra12 {
+	font-size: 10px;
+}
+
+
+
+/*FOOTER*/
+footer {
+	background-color: var(--secoundary-color);
+	padding-top: 32px;
+	padding-bottom: 32px;
+}
+
+.rower {
+	display: flex;
+
+}
+
+
+.footer-container {
+    max-width: 1920px;
+    min-width: 800px;
+    margin-bottom: 18px;
+    margin-top: 48px;
+    display: flex; /* Ensure flexbox is used */
+    align-items: center; /* Center items vertically */
+    justify-content: center;
+	flex-wrap: wrap;
+}
+
+
+
+
+
+.logo-footer {
+	width: 200px;
+}
+
+
+
+
+.c1,
+.c2,
+.c3,
+.c4 {
+	max-width: 400px;
+	min-width: 170px;
+	float: none;
+	margin-right: 58px;
+	margin-bottom: 24px;
+}
+
+
+
+
+
+p.registo,
+p.link {
+	color: var(--sixth-color);
+	font-size: 16px;
+	letter-spacing: .5px;
+	line-height: 1.8em;
+	margin-bottom: 16px;
+	margin-top: 2px;
+}
+
+
+h3.titles {
+	color: white;
+	font-size: 18px;
+	font-weight: 900;
+	line-height: 1.1em;
+	margin-top: 24px;
+}
+
+a {
+	background-color: transparent;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 1.2em;
+	text-decoration: none;
+}
+
+a:active {
+	outline: 0;
+}
+
+a:hover {
+	outline: 0;
+}
+
+
+
+
+/* good to know */
+span.link {
+	color: var(--sixth-color);
+	font-weight: 300;
+}
+
+/* hover */
+span.link:hover {
+	color: white;
+	font-weight: 600;
+}
+
+a.footer-icons {
+	color: white;
+	background-color: transparent;
+	color: var(--sixth-color);
+	display: inline-block;
+	font-size: 16px;
+	margin: 12px 8px 12px 0px;
+	font-weight: 400;
+	line-height: 1.2em;
+	max-width: 100%;
+	opacity: .8;
+	text-decoration: none;
+}
+
+a.footer-icons:hover {
+	opacity: 2;
+	outline: 0;
+}
+
+
+
+
+.menu-button {
+	display: none;
+}
+
+
+.toggle-checkbox {
+	display: none;
+}
+
+
+
+/* Carocel ----------------------*/
+.carousel {
+	position: relative;
+	width: 1000px;
+	height: 700px;
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	margin: 0 auto;
+}
+
+.carousel-track-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.carousel-track {
+	display: flex;
+	transition: transform 0.5s ease-in-out;
+	padding: 0;
+	margin: 0;
+}
+
+.carousel-slide {
+	min-width: 1000px;
+	height: 700px;
+	transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+.carousel-button {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: var(--sixth-color);
+	opacity: 0.8;
+	border: none;
+	padding: 8px 14px;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: opacity 0.2s ease;
+}
+.carousel-button:hover{
+	opacity: 1;
+}
+
+.carousel-button-left {
+	left: 20px;
+}
+
+.carousel-button-right {
+	right: 20px;
+}
+
+.carousel-nav {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	gap: 10px;
+}
+
+.carousel-indicator {
+	background-color: rgba(158, 158, 158, 0.8);
+	border: none;
+	border-radius: 50%;
+	width: 15px;
+	height: 15px;
+	cursor: pointer;
+	width: 10px;
+	height: 10px;
+	transition: background-color 0.2s ease, width 0.4s ease, height 0.4s ease;
+}
+
+.carousel-indicator.current-slide {
+	background-color: var(--sixth-color);
+	width: 14px;
+	height: 14px;
+}
+/* Carocel ----------------------*/
+
+
+
+
+
+
+
+
+
+
+@media(max-width: 1400px) {
+
+	body {
+		width: 100%;
+	}
+
+	header {
+		height: 50px;
+	}
+
+
+	.showcase {
+		flex-direction: column;
+		height: 740px;
+	}
+
+	.profile {
+		margin: 32px 0 32px 0;
+		padding: 0px 0 0px 0;
+		justify-content: center;
+	}
+	
+	.profileimage {
+		max-width: 500px;
+		min-width: 300px;
+	}
+
+
+	.text_box {
+		padding: 0px 10% 0px 10%;
+		margin: 0 0 0 0;
+		width: 100%;
+		min-width: 300px;
+	}
+	
+	h1 {
+		text-align: center;
+	}
+
+
+
+
+
+
+	.navbar ul li:hover::after {
+		width: 40%;
+		background: #000;
+		position: absolute;
+		left: 0;
+		bottom: -10px;
+	}
+
+
+
+	.menubox {
+		display: flex;
+		justify-content: center;
+	}
+
+
+
+	.navbar-container {
+		width: 48px;
+		height: 48px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		/* Centering vertically */
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		background-color: transparent;
+		z-index: 2;
+	}
+
+	.hamburger-icon {
+		width: 24px;
+		/* Adjustable icon size */
+		height: 24px;
+		margin: 2px 0px 2px 2px;
+	}
+
+
+
+	.logo-container {
+		position: fixed;
+		top: 0;
+		right: 0;
+		z-index: 2;
+		justify-content: center;
+		align-items: center;
+		padding: 14px 42px 14px 0;
+		margin: 0;
+	}
+
+	.logo-menu {
+		width: 140px;
+		/* Your desired logo size */
+
+	}
+
+
+
+
+
+	.square {
+		position: fixed;
+		height: 48px;
+		width: 100%;
+		z-index: 1;
+		background-color: white;
+		top: 0;
+
+		justify-content: unset;
+		margin: 0;
+		border-radius: 0;
+	}
+
+	nav {
+		width: 100%;
+		float: none;
+		margin: 0 0 0 0;
+	}
+
+	.logo {
+		width: 180px;
+	}
+
+	.navbar {
+		padding: 0px 46px 0px 46px;
+	}
+
+
+	/* ------------ */
+	.menu__toggle {
+		position: relative;
+		z-index: 0;
+
+		width: 48px;
+		height: 48px;
+
+		justify-content: center;
+		align-items: center;
+		/* Centering vertically */
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		background-color: transparent;
+
+
+		justify-content: flex-end;
+		/* Align to the right side */
+		align-items: center;
+	}
+
+	.toggle-checkbox {
+		display: none;
+	}
+
+	/*width: 48px;
+		height: 48px;
+		display: flex;
+		justify-content: center;
+		align-items: center; 
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		background-color: transparent;
+		z-index: 2;*/
+
+	.menu__links {
+		position: absolute;
+		width: 110vw;
+		height: 120vh;
+		margin: -100px 0 0 -50px;
+		padding: 125px 50px 50px 50px;
+		background-color: white;
+		z-index: 0;
+		transform: translateY(-100%);
+		transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+	}
+
+	.toggle-checkbox:checked~.menu__links {
+		transform: none;
+	}
+
+	.menu-button {
+		background: none;
+		border: none;
+		cursor: pointer;
+		padding: 0;
+		display: inline-flex;
+		align-items: center;
+		width: none;
+		justify-content: center;
+		position: relative;
+		/* Allows the label to be clickable */
+		z-index: 2;
+		/* Ensure it's above the menu */
+
+		height: 100%;
+	}
+
+	.hamburger-icon {
+		width: 24px;
+		height: 24px;
+	}
+
+	.menu__links a {
+		color: var(--secoundary-color);
+		transition: color 0.3s ease;
+	}
+
+
+
+	.menu__links li {
+		font-size: 22px;
+	}
+
+	/* ------------ */
+
+
+	.hamburger-icon:hover {
+		transform: scale(1.1);
+			/* Slight zoom effect on hover */
+	}
+
+
+
+
+
+	.profile {}
+
+
+	.navbar ul li {
+		display: block;
+		margin: 24px 24px 24px 24px;
+	}
+
+
+
+
+
+
+
+
+
+
+
+	footer {}
+
+
+	.footer-container {
+		flex-direction: column;
+        align-items: center;
+		min-width: 200px;
+	}
+
+.c1,
+.c2,
+.c3,
+.c4 {
+	margin-right: 0; /* Remove right margin for stacked elements */
+    margin-bottom: 24px;
+	padding: 0 24px;
+}
+
+
+
+
+
+}
+
+
+
+
+
+@media(max-width: 700px) {
+	/* 700 PIXELS                                           STOP HERE 700PX */
+
+	body {
+		width: 100%;
+	}
+
+	header {
+		height: 50px;
+	}
+
+
+	.showcase {
+		flex-direction: column;
+		height: 740px;
+	}
+
+	.profile {
+		margin: 48px 28px 18px 28px;
+		padding: 0px 0 0px 0;
+		justify-content: center;
+	}
+	
+	.profileimage {
+		max-width: 400px;
+		min-width: 200px;
+	}
+
+
+	.text_box {
+		padding: 0px 48px 0px 48px;
+		margin: 0 0 0 0;
+		max-width: 800px;
+		min-width: none;
+	}
+	
+	h1 {
+		text-align: middle;
+		font-size: 56px;
+	}
+	p1 {
+		font-size: 16px;
+	}
+
+
+
+
+
+
+
+
+
+
+	.navbar-container {
+		width: 48px;
+		height: 48px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		/* Centering vertically */
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		background-color: transparent;
+		z-index: 2;
+	}
+
+	.hamburger-icon {
+		width: 24px;
+		/* Adjustable icon size */
+		height: 24px;
+	}
+
+
+.footer-container{
+	justify-content: center;
+}
+
+
+
+	.logo-container {
+		position: fixed;
+		top: 0;
+		right: 0;
+		z-index: 2;
+		justify-content: center;
+		align-items: center;
+		padding: 14px 24px 14px 0;
+		margin: 0;
+	}
+
+	.logo-menu {
+		width: 140px;
+		/* Your desired logo size */
+
+	}
+
+
+
+
+
+	.square {
+		position: fixed;
+		height: 48px;
+		width: 100%;
+		z-index: 1;
+		background-color: white;
+		top: 0;
+
+		justify-content: unset;
+		margin: 0;
+		border-radius: 0;
+	}
+
+	nav {
+		width: 100%;
+		float: none;
+		margin: 0 0 0 0;
+	}
+
+	.logo {
+		width: 180px;
+	}
+
+	.navbar {
+		padding: 0px 26px 0px 26px;
+	}
+
+
+	/* ------------ */
+	.menu__toggle {
+		position: relative;
+		z-index: 0;
+
+		width: 48px;
+		height: 48px;
+
+		justify-content: center;
+		align-items: center;
+		/* Centering vertically */
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		background-color: transparent;
+
+
+		justify-content: flex-end;
+		/* Align to the right side */
+		align-items: center;
+	}
+
+	.toggle-checkbox {
+		display: none;
+	}
+
+	/*width: 48px;
+		height: 48px;
+		display: flex;
+		justify-content: center;
+		align-items: center; 
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		background-color: transparent;
+		z-index: 2;*/
+
+	.menu__links {
+		position: absolute;
+		width: 90vw;
+		height: 120vh;
+		margin: -100px 0 0 -50px;
+		padding: 125px 50px 50px 50px;
+		background-color: white;
+		z-index: 0;
+		transform: translateY(-100%);
+		transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+	}
+
+	.toggle-checkbox:checked~.menu__links {
+		transform: none;
+	}
+
+	.menu-button {
+		background: none;
+		border: none;
+		cursor: pointer;
+		padding: 0;
+		display: inline-flex;
+		align-items: center;
+		width: none;
+		justify-content: center;
+		position: relative;
+		/* Allows the label to be clickable */
+		z-index: 2;
+		/* Ensure it's above the menu */
+
+		height: 100%;
+	}
+
+	.hamburger-icon {
+		width: 24px;
+		height: 24px;
+	}
+
+	.menu__links a {
+		color: var(--secoundary-color);
+		transition: color 0.3s ease;
+	}
+
+
+
+	.menu__links li {
+		font-size: 22px;
+	}
+
+	/* ------------ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	.hamburger-icon:hover {
+		transform: scale(1.1)
+			/* Slight zoom effect on hover */
+	}
+
+
+	/*
+	  display: flex;
+	  justify-content: center;
+	  position: fixed;
+	  margin: 0 auto;
+	  height: 70px;
+	  width: 80%;
+	  z-index: 1;
+	  background-color: white;
+	  top: 20px;
+	  border-radius: 35px;
+	*/
+
+
+
+
+
+
+	.text {
+		max-width: 100%;
+		margin: 32px 0 0 0px;
+	}
+
+
+
+	.navbar ul li {
+		display: block;
+		margin: 24px 24px 24px 24px;
+	}
+
+
+
+
+	.menubutton {
+		color: 212427;
+		border: 2px solid #212427;
+		margin-left: 17%;
+		font-size: 13px;
+		background: transparent;
+		cursor: pointer;
+		border-radius: 25px;
+		height: 20px;
+		width: 20px;
+		z-index: 5;
+	}
+
+	/* Hidden checkbox for toggling menu */
+	#menuToggle {
+		display: none;
+	}
+
+	.overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 0;
+		overflow: hidden;
+		background-color: rgba(0, 0, 0, 0.9);
+		transition: height 1s ease;
+		z-index: 3;
+	}
+
+	#menuToggle:checked+.overlay {
+		height: 100%;
+	}
+
+	.overlay-content {
+		position: relative;
+		top: 25%;
+		width: 100%;
+		text-align: center;
+		color: white;
+	}
+
+	.overlay-content ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	.overlay-content ul li {
+		margin: 20px 0;
+	}
+
+	.overlay-content a {
+		font-size: 36px;
+		color: white;
+		text-decoration: none;
+		transition: color 0.3s;
+	}
+
+	.overlay-content a:hover {
+		color: var(--fith-color);
+	}
+
+
+
+
+	/*  */
+	.navbar.hidden>*:not(.menubutton) {
+		display: none;
+	}
+
+	.collapsible {
+		padding: 12px 24px 12px 32px;
+	}
+
+	.titlebig {
+		margin: 0 0 0 0px;
+	}
+
+
+
+
+
+
+
+
+
+	footer {
+		background-color: var(--secoundary-color);
+		padding-top: 32px;
+		padding-bottom: 32px;
+	}
+
+	.rower {
+		display: block;
+	}
+
+
+	.container {
+		padding-left: 16px;
+		padding-right: 16px;
+		margin-top: 24px;
+	}
+
+
+
+
+	.logo-footer {
+		width: 200px;
+	}
+
+
+
+
+	.c1,
+	.c2,
+	.c3,
+	.c4 {
+		width: 100%;
+		float: none;
+		margin-bottom: 24px;
+		text-align: center;
+		padding: 0;
+	}
+
+
+
+	p.registo,
+	p.link {
+		color: var(--sixth-color);
+		text-align: center;
+		font-size: 16px;
+		letter-spacing: .5px;
+		line-height: 1.8em;
+		margin-bottom: 16px;
+		margin-top: 2px;
+	}
+
+
+	h3.titles {
+		color: white;
+		text-align: center;
+		font-size: 20px;
+		font-weight: 900;
+		line-height: 1.1em;
+		margin-top: 24px;
+	}
+
+
+
+	a {
+		background-color: transparent;
+		font-size: 17px;
+		font-weight: 400;
+		line-height: 1.2em;
+		text-decoration: none;
+	}
+
+	a:active {
+		outline: 0;
+	}
+
+	a:hover {
+		outline: 0;
+	}
+
+	/* good to know */
+	span.link {
+		color: var(--sixth-color);
+		font-weight: 300;
+	}
+
+	/* hover */
+	span.link:hover {
+		color: white;
+		font-weight: 600;
+	}
+
+	a.footer-icons {
+		color: white;
+		background-color: transparent;
+		color: var(--sixth-color);
+		display: block;
+		font-size: 17px;
+		margin: 0 auto;
+		font-weight: 400;
+		line-height: 1.2em;
+		max-width: 100%;
+		opacity: .8;
+		text-decoration: none;
+		text-align: center;
+		margin-bottom: 8px;
+	}
+
+	a.footer-icons:hover {
+		opacity: 2;
+		outline: 0;
+	}
+
+
+
+
+
+	.overlay {
+		display: none;
+	}
+
+
+
+
+
+	.icons-footer {
+		display: flex;
+		align-items: center;
+		padding: 12px 0px 0px 0px;
+	}
+
+
+	.footer-icons {
+		margin: 0 auto;
+		display: block;
+		text-align: center;
+		margin-bottom: 8px;
+		/* Add spacing between icons */
+	}
+
+
+
+
+
+
+
+}
