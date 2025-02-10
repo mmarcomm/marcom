@@ -46,7 +46,16 @@
 			});
 		</script>
 
-
+<div id="upcomming-placeholder"></div>
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+		fetch("upcomming.html")
+			.then(response => response.text())
+			.then(data => {
+				document.getElementById("upcomming-placeholder").innerHTML = data;
+			});
+	});
+</script>
 
 
 
