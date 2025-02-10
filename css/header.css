@@ -15,21 +15,9 @@
 	position: fixed;
 	height: 100px;
 	width: 100%;
-	z-index: 1;
+	z-index: 2;
 	background-color: white;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -47,7 +35,6 @@
 	z-index: 2;
 	padding: 0px 10% 0px 10%;
 }
-
 
 ul {
 	margin-top: 14px;
@@ -156,22 +143,6 @@ ul li:hover a {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media(max-width: 1400px) {
 
 
@@ -200,18 +171,11 @@ ul li:hover a {
 	width: 180px;
 }
 
-
-
-
-
-
-
-
 .square {
 	position: fixed;
 	height: 48px;
 	width: 100%;
-	z-index: 1;
+	z-index: 2;
 	background-color: white;
 	top: 0;
 	justify-content: unset;
@@ -328,13 +292,6 @@ nav {
 		/* Slight zoom effect on hover */
 }
 
-
-
-
-
-.profile {}
-
-
 .navbar ul li {
 	display: block;
 	margin: 24px 24px 24px 24px;
@@ -343,20 +300,6 @@ nav {
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 @media(max-width: 700px) {
@@ -381,14 +324,6 @@ nav {
 .logo {
 	width: 180px;
 }
-
-
-
-
-
-
-
-
 
 
 .navbar {
@@ -484,25 +419,6 @@ nav {
 
 /* ------------ */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .hamburger-icon:hover {
 	transform: scale(1.1)
 		/* Slight zoom effect on hover */
@@ -522,25 +438,10 @@ nav {
   border-radius: 35px;
 */
 
-
-
-
-
-
-.text {
-	max-width: 100%;
-	margin: 32px 0 0 0px;
-}
-
-
-
 .navbar ul li {
 	display: block;
 	margin: 24px 24px 24px 24px;
 }
-
-
-
 
 .menubutton {
 	color: 212427;
@@ -560,64 +461,10 @@ nav {
 	display: none;
 }
 
-.overlay {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 0;
-	overflow: hidden;
-	background-color: rgba(0, 0, 0, 0.9);
-	transition: height 1s ease;
-	z-index: 3;
-}
-
-#menuToggle:checked+.overlay {
-	height: 100%;
-}
-
-.overlay-content {
-	position: relative;
-	top: 25%;
-	width: 100%;
-	text-align: center;
-	color: white;
-}
-
-.overlay-content ul {
-	list-style: none;
-	padding: 0;
-}
-
-.overlay-content ul li {
-	margin: 20px 0;
-}
-
-.overlay-content a {
-	font-size: 36px;
-	color: white;
-	text-decoration: none;
-	transition: color 0.3s;
-}
-
-.overlay-content a:hover {
-	color: var(--fith-color);
-}
-
-
-
-
 /*  */
 .navbar.hidden>*:not(.menubutton) {
 	display: none;
 }
 
-.collapsible {
-	padding: 12px 24px 12px 32px;
-}
-
-.titlebig {
-	margin: 0 0 0 0px;
-}
 
 }

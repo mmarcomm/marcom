@@ -1,0 +1,52 @@
+
+
+
+
+
+.overlay {														/* Check This  */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: height 1s ease;
+    z-index: 3;
+}
+
+#menuToggle:checked+.overlay {
+    height: 100%;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.overlay-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.overlay-content ul li {
+    margin: 20px 0;
+}
+
+.overlay-content a {
+    font-size: 36px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.overlay-content a:hover {
+    color: var(--fith-color);
+}
+
+.overlay {
+    display: none;
+}
