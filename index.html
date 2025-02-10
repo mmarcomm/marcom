@@ -4,10 +4,10 @@
 		<!-- Definir  -->
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link href="css/Style.css" rel="stylesheet" type="text/css">
+		<link href="css/Body.css" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://use.typekit.net/uhg8sos.css">
 		<link rel="stylesheet" href="https://use.typekit.net/yiz2qnq.css">
-		<title>Mariana Mártires</title>
+		<title>Clover Prints</title>
 		<link rel="icon" href="SGVs/M.svg" type="image/x-icon" />
 	</head>
 	<body>
@@ -21,20 +21,36 @@
 						});
 				});
 			</script>
-			
 		<div class="showcase">
 			<div class="profile">
 				<img src="imagens/mari.JPG" alt="Mari" class="profileimage">
 			</div>
 			<div class="text_box">
-				<h1>Perfil de Artista</h1>
+				<h1>Projeto em prodecimento</h1>
 				<p1> 
-					<b>Mariana Mártires</b> é uma artista visual com um olhar atento nas complexas dinâmicas das relações humanas, situações monótonas ou de melancolia e ocasionalmente os impactos da saúde e das doenças mentais na contemporâneadade mediante as areas do desenho, pintura ilustração escrita video e instalaçãocom convite aberto a conhecer o seu corpo de trabalho.</p1>
+					<b>Marco Martin</b> é um Designer que desenvolve projetos de várias formas e qualidades e aqui podem encontrar todo o tipo de produtos na minha loja online ou projetos desenvolvidos </p1>
 				<p1> 
-					<b>Lançamento agendado para Julho 2025</b> 
+					<b>Lançamento agendado para Março 2025</b> 
 				</p1>
 			</div>
 		</div>
+
+		<div id="form-placeholder"></div>
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				fetch("form.html")
+					.then(response => response.text())
+					.then(data => {
+						document.getElementById("form-placeholder").innerHTML = data;
+					});
+			});
+		</script>
+
+
+
+
+
+
 	<div id="obrasSectionOffset" class="SectionOffset"></div>
 <button type="button" class="collapsible" id="obrasSection"><p class="titlebig">Obras</p></button>
 <div class="content">

@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="pt-PT">
+	<head>
+		<!-- Definir  -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/Style.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="https://use.typekit.net/uhg8sos.css">
+		<link rel="stylesheet" href="https://use.typekit.net/yiz2qnq.css">
+		<title>Mariana Mártires</title>
+		<link rel="icon" href="SGVs/M.svg" type="image/x-icon" />
+	</head>
+	<!-- Add Google tag (gtag.js) -->
+	<body>
+			<header>
+				<nav>
+				<div class="banner">
+					<div class="menubox">
+						<div class="square">
+							<div class="navbar">
+								<div class="logo-container">
+									<a href="index.html">
+										<img src="SGVs/logo5.svg" alt="Studio313 logo" class="logo"/>
+									</a>
+								</div>
+							<div class="menu__toggle">
+								
+								<!-- Hidden Checkbox -->
+								<input type="checkbox" id="menuToggleCheckbox" class="toggle-checkbox" />
+								<!-- Label acting as a button -->
+								<label for="menuToggleCheckbox" class="menu-button" aria-label="Toggle Navigation">
+									<img src="SGVs/menu.svg" alt="Menu Icon" class="hamburger-icon">
+								</label>
+								<!-- Menu items -->
+								<ul id="navgatorList" class="menu__links">
+									<li><a href="index.html">Obras</a></li>
+									<li><a href="Exposições.html" class="activemenu">Exposições</a></li>
+									<li><a href="Sobre.html">SOBRE</a></li>
+									<li><a href="Conectar.html">Conectar</a></li>
+								</ul>
+							</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</nav>
+			</header>
+			<div class="text_box">
+				<h1>Exposições que vêm aseguir</h1>
+			</div>
+			<div class="row">
+			<a href="Afasta-te, Aproximate.html"  class="up-coming">
+				<div class="up-coming-date">
+						<img class="small-icon" src="SGVs/calendarmy.svg" alt="Calendar Icon">
+						<p1>Junho a Agosto 2025</p1>
+				</div>
+				<picture>
+					<img class="image" src="Website Imgs/IMG_5858.png" alt="Imagem do evento">
+				</picture>
+				
+				<div class="up-coming-textbox">
+					<h4>Exposição Coletiva</h4>
+					<p4>O museu de arte contemporânea de Faro está no processo de colocar uma data para a exposição dos mais variados artistas plasticos do Algarve</p4>
+				</div>
+					<div class="up-coming-price">
+						<img class="smaller-icon" src="SGVs/tickets.svg" alt="Calendar Icon">
+						<p3>Desde €8 a €12</p3>
+					</div>
+			</a>
+		</div>
+		<div class="showcase">
+			<div class="profile">
+				<img src=""  class="profileimage">
+			</div>
+			<div class="text_box">
+				<h1>Marcação de Exposições</h1>
+				<p1> 
+					Caso tenha algum interesse em marcar alguma Exposição (disponibilidade apartir de 2026)
+				</p1>
+				<p1> 
+					<b>Lançamento agendado para Julho 2025</b> 
+				</p1>
+			</div>
+		</div>
+	<div id="obrasSectionOffset" class="SectionOffset"></div>
+	</div>
+<button type="button" class="collapsible" id="obrasSection"><p class="titlebig">Exposições</p></button>
+<div class="content">
+	<div class="row">
+		<a href="Afasta-te, Aproximate.html" class="column4">
+			<img src="Website Imgs/Exposicoes/IMG_3080.jpg" alt="photoart" class="photoside"> 
+			<div class="text">
+			<h4>Afasta-te, Aproxima-te. <br>Uma Exploração Plástica sobre Relações na Contemporaneidade</h4> 
+			<p4> Exposição de conclusão de Mestrado em criação artística contemporânea DECA / UA</p4>
+			</div>
+        </a>
+	</div>
+</div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+	 // Get all collapsible buttons
+	var coll = document.getElementsByClassName("collapsible");
+
+	// Initialize all collapsible sections to be open
+	for (var i = 0; i < coll.length; i++) {
+		 var content = coll[i].nextElementSibling; // Get the next sibling content
+		content.classList.add("show"); // Set initial state to open
+		content.style.maxHeight = content.scrollHeight + "px"; // Set max-height to the content's scroll height
+		content.style.opacity = "1"; // Set initial opacity to 1
+		content.style.transition = "opacity 0.5s, max-height 0.5s"; // Set fade transition
+
+		// Add click event listener to each collapsible button
+		coll[i].addEventListener("click", function() {
+		var content = this.nextElementSibling; // Get the content associated with the clicked element
+		// Toggle the show class
+		if (content.classList.contains("show")) {
+		 content.style.opacity = "0"; // Fade out
+			setTimeout(() => {
+					content.style.maxHeight = "0"; // Collapse the content
+					content.classList.remove("show"); // Remove the show class
+				}, 500); // Delay to allow fade-out to occur
+			 } else {
+				content.classList.add("show"); // Add the show class
+				content.style.maxHeight = content.scrollHeight + "px"; // Set max-height to the content's scroll height
+				setTimeout(() => {
+					content.style.opacity = "1"; // Fade in
+				}, 10); // Delay to ensure max-height is set before fading in
+			}
+		});
+	}
+});
+</script>
+
+<script>
+function scrollToButton() {
+    var targetButton = document.getElementById('obrasButton');
+    if (targetButton) {
+        // Calculate the Y offset of the target button from the top of the page
+        var targetPosition = targetButton.getBoundingClientRect().top + window.pageYOffset;
+        
+        // Scroll to the calculated position smoothly
+        window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+        });
+    }
+}
+	</script>
+
+<script>
+	function openNav() {
+		document.getElementById("myNav").style.height = "100%";
+	}
+
+	function closeNav() {
+		document.getElementById("myNav").style.height = "0%";
+	}
+</script>
+
+
+		<script src="Javascript/Javascript.js"></script>
+
+		<footer>
+			<div class="footer-container">			
+				<div class="rower">
+					<div class="c2">
+						<img src="SGVs/whitelogo.svg" alt="" width="200" class="logo-footer">
+						<div class="icons-footer"><a href="" target="_blank" class="footer-icons"><img src="SGVs/Icons/Twitter Icon.svg" width="20" alt="Twitter icon"></a><!--
+						--><a href="" target="_blank" class="footer-icons"><img src="SGVs/Icons/Instagram Icon.svg" width="20" alt="Instagram icon"></a><!--
+						--><a href="" target="_blank" class="footer-icons"><img src="SGVs/Icons/Facebook Icon.svg" width="20" alt="Facebook Icon"></a><!--
+						--><a href="" target="_blank" class="footer-icons"><img src="SGVs/Icons/LinkedIn Icon.svg" width="20" alt="LinkedIn Icon"></a><!--
+						--><a href="" target="_blank" class="footer-icons"><img src="SGVs/Icons/Pinterest Icon.svg" width="20" alt="Pinterest Icon" class=""></a><!--
+						--></div>
+						<a href="mailto:mari@gmail.com" class="link"><span class="link">mari@gmail.com</span></a></p>
+					</div>
+				
+				<div class="c3">
+					<h3 class="titles">Projetos</h3>
+					<p class="link"><a href=""><span class="link">Lugar Seguro</span></a><br><!--
+					--><a href=""><span class="link">Murais UA</span></a><br><!--
+					--><a href=""><span class="link">FAQ</span></a><br><!--
+					--><a href=""><span class="link">Compra</span></a><br><!--
+					--><a href=""><span class="link">certificados</span></a></p>
+				</div>
+				<div class="c4">
+					<h3 class="titles">Páginas</h3>
+					<p class="link"><a href="" target="_blank"><span class="link">Página Inicial</span></a><br>
+					<a href=""><span class="link">Obras</span></a><br>
+					<a href=""><span class="link">Blog</span></a><br>
+					<span></span><a href=""><span class="link">Sobre o artista</span></a><br>
+					<a href=""><span class="link">Exposições</span></a><br>
+				</div>
+				</div>
+			</div>
+		</footer>
+
+	</body>			
+
+</html>
+
