@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pt-PT">
+	<head>
+		<!-- Definir  -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/body.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="https://use.typekit.net/uhg8sos.css">
+		<link rel="stylesheet" href="https://use.typekit.net/yiz2qnq.css">
+		<title>mártires - Sem Titulo</title>
+		<link rel="icon" href="SGVs/M.svg" type="image/x-icon" />
+	</head>
+	<body>
+		<h1>Password</h1>
+		<input type="password" id="password">
+<button class="decrypt">Decrypt</button>
+<script>
+    var myEncryptedPage = '<html-string-pre-encrypted-with-your-password>';
+    $('.decrypt').click(function(){
+        var password = $('#password').val();
+        // 'decrypt' tries to decrypt your string with the user provided password
+        document.write(decrypt(myEncryptedPage, password));
+    });
+</script>
+	</body>			
+
+</html>
+

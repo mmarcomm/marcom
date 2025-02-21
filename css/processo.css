@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+/* Definir o tipo de letra, de onde são as margens, o estilo e o peso do tipo de letra */
+:root {
+	--primary-color: #3FB498;
+	/*EX background-color: var(--primary-color); var(--secoundary-color); var(--tertiary-color); var(--quarternary-color); var(--fith-color); var(--sixth-color);*/
+	--secoundary-color: #212427;
+	/* black for text */
+	--tertiary-color: #F4F4F4;
+	/*  */
+	--quarternary-color: #009270;
+	/* hover*/
+	--fith-color: #9AD4C6;
+	/* hover*/
+	--sixth-color: #EAEAEA;
+}
+
+
+body {
+	font-family: Halyard Text Regular, halyard-text, halyard-display;
+	background-color: var(--tertiary-color);
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	font-style: normal;
+	font-weight: 200;
+}
+
+p {
+	/*color: white;*/
+}
+
+	/*para paragrafos do tipo - */
+p1 {
+	color: var(--secoundary-color);
+	font-weight: 100;
+	font-size: 16px;
+	font-weight: 100;
+	text-align: left;
+}
+
+p3 {
+	color: var(--secoundary-color);
+	font-weight: 400;
+	font-size: 16px;
+	text-align: left;
+	margin: 0px 0px 2px 0px;
+}
+
+	/*para paragrafos do tipo - */
+p4 {
+	color: var(--secoundary-color);
+	line-height: normal;
+	font-weight: lighter;
+	margin: 0px 0px 10px 0px;
+}
+
+	/*para títulos do tipo - */
+h1 {
+	color: var(--quarternary-color);
+	text-align: left;
+	font-size: 70px;
+	margin: 0 0 42px 0;
+}
+
+	/*para títulos do tipo - */
+h2 {
+	line-height: 0;
+	margin: 42px 0px 24px 0px;
+	font-weight: 500;
+}
+
+h3 {
+	font-size: 32px;
+	font-weight: 300;
+	line-height: 24px;
+	margin: 0px 0px 28px 0px;
+}
+
+
+	/*para títulos do tipo - */
+h4 {
+	color: var(--secoundary-color);
+	font-size: 24px;
+	line-height: normal;
+	font-weight: 500;
+	margin: 0px 0px 10px 0px;
+}
+
+
+
+.sidebar {
+	display: inline;
+ 	width: 8%;
+ 	height: 900px;
+ 	background-color: violet;
+ 	align-items: right;
+	writing-mode: vertical-rl;
+}
+.sidebar .text {
+	writing-mode: vertical-rl;
+}
+.text h4 {
+	font-size: 28px;
+	margin: 0px 0px 0px 0px;
+}
+
+
+
+
+@media(max-width: 1400px) {
+
+}
+@media(max-width: 700px) {
+	
+}
