@@ -14,10 +14,10 @@
 
         
         <div class="showcase-process">
-			<div class="text_box">
-				<h1>Projeto em prodecimento</h1>
+			<div class="text_box-process">
+				<h1>Proposta do Projeto</h1>
 				<p1> 
-					<b>Marco Martin</b> é um Designer que desenvolve projetos de várias formas e qualidades e aqui podem encontrar todo o tipo de produtos na minha loja online ou projetos desenvolvidos </p1>
+					<b>Reunião</b> Pessoal ou Online dos objetivos e </p1>
 				<p1> 
 					<b>Lançamento agendado para Março 2025</b> 
 				</p1>
@@ -62,14 +62,14 @@
             </div>
         </a>
 
-        <a href="" class="sidebar sidebar-process">
+        <a href="" class="sidebar-selected"  style="border: 2px solid #EAEAEA;">
             <div class="text">
                 <div class="text-column">
                     <h4>Fase 01.</h4>
                     <p2>Processo de Design</p2>
                 </div>
                 <div class="sidebar-row">
-                    <img class="smaller-icon" src="SGVs/arrow.svg" alt="Calendar Icon">
+                    <img class="smaller-icon" src="SGVs/arrowblack.svg" alt="Calendar Icon">
                 </div>
             </div>
         </a>
@@ -87,7 +87,44 @@
                 <div class="margin">
                     <h1>Password</h1>
                 </div>  !-->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const sidebars = document.querySelectorAll(".sidebar, .sidebar-selected");
 
+    sidebars.forEach(sidebar => {
+        sidebar.addEventListener("click", function (event) {
+            event.preventDefault(); // Evita a navegação padrão
+
+            // Encontra o item atualmente selecionado
+            const currentSelected = document.querySelector(".sidebar-selected");
+            
+            if (currentSelected) {
+                // Remove a classe "sidebar-selected" e adiciona "sidebar"
+                currentSelected.classList.remove("sidebar-selected");
+                currentSelected.classList.add("sidebar");
+
+                // Muda o ícone de volta para "SGVs/arrow.svg"
+                const currentIcon = currentSelected.querySelector(".smaller-icon");
+                if (currentIcon) {
+                    currentIcon.src = "SGVs/arrow.svg";
+                }
+            }
+
+            // Se o item clicado já era o selecionado, apenas o desativa
+            if (this !== currentSelected) {
+                this.classList.remove("sidebar");
+                this.classList.add("sidebar-selected");
+
+                // Muda o ícone para "SGVs/arrowblack.svg"
+                const newIcon = this.querySelector(".smaller-icon");
+                if (newIcon) {
+                    newIcon.src = "SGVs/arrowblack.svg";
+                }
+            }
+        });
+    });
+});
+</script>
 	</body>			
 
 </html>
