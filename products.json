@@ -2,9 +2,9 @@
     "t-shirt Vessel": {
        "id": "wander-vessel-tshirt",
     "name": "Wander Vessel T-shirt",
-    "url": "/products.json",
+    "url": "https://cloverprints.com/products.json",
     "price": 25.00,
-    "image": "https://yourusername.github.io/assets/images/spaceship-shirt.jpg",
+    "image": "https://mmarcomm.github.io/Website_Imgs/1.jpg",
     "inventoryManagementMethod": "Variant",
     "dimensions": {
       "weight": 200,
