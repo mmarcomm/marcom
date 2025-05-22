@@ -12,15 +12,6 @@
 	</head>
 	<body>
 			<header id="header-placeholder"></header>
-			<script>
-				document.addEventListener("DOMContentLoaded", function() {
-					fetch("header.html")
-						.then(response => response.text())
-						.then(data => {
-							document.getElementById("header-placeholder").innerHTML = data;
-						});
-				});
-			</script>
 		<div class="showcase">
 			<div class="profile">
 				<img src="imagens/mari.JPG" alt="Mari" class="profileimage">
@@ -33,170 +24,25 @@
 					<b>Lançamento agendado para Março 2025</b> 
 				</p1>
 			</div>
+			<button class="hero-btn snipcart-add-item"
+			data-item-id="clover-poster-01"
+  			data-item-price="15.00"
+  			data-item-url="/"
+  			data-item-description="A4 lucky clover poster"
+  			data-item-name="Clover Poster">
+  			Add to Cart
+			</button>
 		</div>
 
-		<div id="form-placeholder"></div>
-		<!--
-		<script>
-			document.addEventListener("DOMContentLoaded", function() {
-				fetch("form.html")
-					.then(response => response.text())
-					.then(data => {
-						document.getElementById("form-placeholder").innerHTML = data;
-					});
-			});
-		</script>-->
+		<!--<div id="form-placeholder"></div> -->
+
 
 <div id="upcoming-placeholder"></div>
-<script>
-	document.addEventListener("DOMContentLoaded", function() {
-		fetch("upcoming.html")
-			.then(response => response.text())
-			.then(data => {
-				document.getElementById("upcoming-placeholder").innerHTML = data;
-			});
-	});
-</script>
 
 
-
-
-	<div id="obrasSectionOffset" class="SectionOffset"></div>
-<button type="button" class="collapsible" id="obrasSection"><p class="titlebig">Obras</p></button>
-<div class="content">
-	<div class="row">
-		<a href="Sem_titulo.html" class="column1">
-		  <img src="Website Imgs/Sem_Titulo_0.png" alt="photoart" class="photohorizontal"> 
-		  <h2>sem título <span style="float:right;font-weight: 400;">2021</span></h2>
-		  <p1>Ilustração</p1>
-		</a>
-		<div class="column2">
-		  <img src="Website Imgs/IMG_5969.png" alt="photoart" class="photovertical">
-		  <h2>olha! um comboio <span style="float:right;font-weight: 400;">2022</span></h2> 
-		  <p1>Canetas caligráficas e canetas de álcool </p1>
-		  <p2></p2>
-		</div>
-		<div class="row">
-			<div class="column3">
-				<img src="Website Imgs/1.png" alt="photoart" class="photovertical"> 
-			  <h2>Column 3</h2>
-			  <p>Some text..</p>
-			</div>
-		</div>
-	</div>
-</div>
-<button type="button" class="collapsible" id="projetosSection"><p class="titlebig">Projetos</p></button>
-<div class="content">
-	<div class="row">
-		<div class="column4">
-			<img src="Website Imgs/IMG_5969.png" alt="photoart" class="photoside"> 
-			<div class="text">
-			<h3>Projeto CPCJ</span></h3> 
-			<p2> CPCJ Olhão </p2>
-			</div>
-	  </div> 
-	</div>
-</div>
-<button type="button" class="collapsible" style="margin-bottom: 32px;" id="obrasSection"><p class="titlebig">ilustrações</p></button>
-<div class="content">
-	<div class="row">
-		<a href="#" class="column1">
-			<img src="Website Imgs/abracos.abracos.abracos.png" alt="photoart" class="photohorizontal"> 
-			<h2>abracos.abracos <span style="float:right;font-weight: 400;">2021</span></h2>
-			<p1>A3</p1>
-		  </a>
-		<a href="#" class="column1">
-			<img src="Website Imgs/pequenas_Grandes_obesessoes.png" alt="photoart" class="photohorizontal"> 
-			<h2>pequenas Grandes <span style="float:right;font-weight: 400;">2021</span></h2>
-			<p1>A3</p1>
-		  </a>
-	<a href="#" class="column1">
-		<img src="Website Imgs/olha!_um_comboio.png" alt="photoart" class="photohorizontal"> 
-		<h2>Olha um comboio <span style="float:right;font-weight: 400;">2021</span></h2>
-		<p1>A3</p1>
-	  </a>
-	  <a href="#" class="column1">
-		<img src="Website Imgs/olha!_um_comboio.png" alt="photoart" class="photohorizontal"> 
-		<h2>Olha um comboio <span style="float:right;font-weight: 400;">2021</span></h2>
-		<p1>A3</p1>
-	  </a>
-	  <a href="#" class="column1">
-		<img src="Website Imgs/olha!_um_comboio.png" alt="photoart" class="photohorizontal"> 
-		<h2>Olha um comboio <span style="float:right;font-weight: 400;">2021</span></h2>
-		<p1>A3</p1>
-	  </a>
-	  <a href="#" class="column1">
-		<img src="Website Imgs/olha!_um_comboio.png" alt="photoart" class="photohorizontal"> 
-		<h2>Olha um comboio <span style="float:right;font-weight: 400;">2021</span></h2>
-		<p1>A3</p1>
-	  </a>
-
-
-	  
-	</div>
 </div>
 <div id="footer-placeholder"></div>
 
-<script>
-	document.addEventListener("DOMContentLoaded", function() {
-		fetch("footer.html")
-			.then(response => response.text())
-			.then(data => {
-				document.getElementById("footer-placeholder").innerHTML = data;
-			});
-	});
-</script>
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-	 // Get all collapsible buttons
-	var coll = document.getElementsByClassName("collapsible");
-
-	// Initialize all collapsible sections to be open
-	for (var i = 0; i < coll.length; i++) {
-		 var content = coll[i].nextElementSibling; // Get the next sibling content
-		content.classList.add("show"); // Set initial state to open
-		content.style.maxHeight = content.scrollHeight + "px"; // Set max-height to the content's scroll height
-		content.style.opacity = "1"; // Set initial opacity to 1
-		content.style.transition = "opacity 0.5s, max-height 0.5s"; // Set fade transition
-
-		// Add click event listener to each collapsible button
-		coll[i].addEventListener("click", function() {
-		var content = this.nextElementSibling; // Get the content associated with the clicked element
-		// Toggle the show class
-		if (content.classList.contains("show")) {
-		 content.style.opacity = "0"; // Fade out
-			setTimeout(() => {
-					content.style.maxHeight = "0"; // Collapse the content
-					content.classList.remove("show"); // Remove the show class
-				}, 500); // Delay to allow fade-out to occur
-			 } else {
-				content.classList.add("show"); // Add the show class
-				content.style.maxHeight = content.scrollHeight + "px"; // Set max-height to the content's scroll height
-				setTimeout(() => {
-					content.style.opacity = "1"; // Fade in
-				}, 10); // Delay to ensure max-height is set before fading in
-			}
-		});
-	}
-});
-</script>
-
-<script>
-function scrollToButton() {
-    var targetButton = document.getElementById('obrasButton');
-    if (targetButton) {
-        // Calculate the Y offset of the target button from the top of the page
-        var targetPosition = targetButton.getBoundingClientRect().top + window.pageYOffset;
-        
-        // Scroll to the calculated position smoothly
-        window.scrollTo({
-            top: targetPosition,
-            behavior: 'smooth'
-        });
-    }
-}
-	</script>
 	<script src="javascript.js"></script>
 	</body>			
 

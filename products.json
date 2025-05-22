@@ -1,0 +1,68 @@
+{
+    "t-shirt Vessel": {
+       "id": "wander-vessel-tshirt",
+    "name": "Wander Vessel T-shirt",
+    "url": "/products.json",
+    "price": 25.00,
+    "image": "https://yourusername.github.io/assets/images/spaceship-shirt.jpg",
+    "inventoryManagementMethod": "Variant",
+    "dimensions": {
+      "weight": 200,
+      "width": 25,
+      "height": 2,
+      "length": 30
+    },
+    "variants": [
+      {
+        "variation": [
+          { "name": "Size", "option": "S" },
+          { "name": "Color", "option": "Black" }
+        ],
+        "stock": 10
+      },
+      {
+        "variation": [
+          { "name": "Size", "option": "M" },
+          { "name": "Color", "option": "Black" }
+        ],
+        "stock": 12
+      }
+    ],
+    "customFields": [
+      {
+        "name": "Note",
+        "type": "text",
+        "required": false
+      }
+    ],
+    "categories": ["T-Shirts", "Space", "Wander"]
+  },
+      "t-shirt Launch": {
+        "product-Title": "Sem título",
+        "product-Materials": "Ilustração - A3 420mm 297mm / marcadores, canetas caligráficas e caneta branca",
+        "product-Text": "Undertale é aquele tipo de jogo que, mesmo nunca tendo jogado antes, tem aquele sabor de nostalgia na sua essência.☁️🎮<br>\nO refúgio na nostalgia é confortável, é relembrar emoções e memórias que existiram ou até que não existiram. É montar um espaço abstrato. É...limitante.<br>\nEsse refúgio parece tão bonitinho, perfeito, mesmo coberto com uma fina camada de pó.\n(o personagem à direita é inspirado num amalgamate do jogo Undertale)",
+        "year": "Julho 2023",
+        "status": "disponível",
+        "buyLink": "https://buy.stripe.com/test_4gweVLgBN1c859u4gg",
+        "images": {
+              "mainImage": "Website Imgs/Sem_Titulo_0.png",
+              "mainImage2": "Website Imgs/Sem_Titulo_0.png",
+              "image2": "Website Imgs/IMG_5839_2.png",
+              "image3": "Website Imgs/IMG_58392.png"
+        }
+      },
+        "t-shirt Elsewhere": {
+          "product-Title": "fim do jogo",
+          "product-Materials": "Ilustração - A3 420mm 297mm / canetas caligráficas, caneta branca e posca",
+          "product-Text": "",
+          "year": "",
+          "status": "disponível",
+          "buyLink": "",
+          "images": {
+              "mainImage": "Website Imgs/fim_do_jogo.png",
+              "mainImage2": "Website Imgs/fim_do_jogo.png",
+              "image2": "",
+              "image3": ""
+        }
+        }
+    }

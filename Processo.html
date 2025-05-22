@@ -87,44 +87,8 @@
                 <div class="margin">
                     <h1>Password</h1>
                 </div>  !-->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const sidebars = document.querySelectorAll(".sidebar, .sidebar-selected");
-
-    sidebars.forEach(sidebar => {
-        sidebar.addEventListener("click", function (event) {
-            event.preventDefault(); // Evita a navegação padrão
-
-            // Encontra o item atualmente selecionado
-            const currentSelected = document.querySelector(".sidebar-selected");
-            
-            if (currentSelected) {
-                // Remove a classe "sidebar-selected" e adiciona "sidebar"
-                currentSelected.classList.remove("sidebar-selected");
-                currentSelected.classList.add("sidebar");
-
-                // Muda o ícone de volta para "SGVs/arrow.svg"
-                const currentIcon = currentSelected.querySelector(".smaller-icon");
-                if (currentIcon) {
-                    currentIcon.src = "SGVs/arrow.svg";
-                }
-            }
-
-            // Se o item clicado já era o selecionado, apenas o desativa
-            if (this !== currentSelected) {
-                this.classList.remove("sidebar");
-                this.classList.add("sidebar-selected");
-
-                // Muda o ícone para "SGVs/arrowblack.svg"
-                const newIcon = this.querySelector(".smaller-icon");
-                if (newIcon) {
-                    newIcon.src = "SGVs/arrowblack.svg";
-                }
-            }
-        });
-    });
-});
-</script>
+<!-- Sidebar -->
+<script src="javascript.js"></script>
 	</body>			
 
 </html>

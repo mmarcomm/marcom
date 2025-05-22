@@ -26,17 +26,18 @@ body {
 	font-weight: 200;
 }
 
+.Buttonmiddle {
+	/* defenir as margens */
+	margin-top: 32px;
+	display: flex;
+	align-items: center;
+}
+
 header {
 	width: 100%;
 	height: 110px;
 	background-color: var(--primary-color);
 }
-
-p {
-	/*color: white;*/
-}
-
-	/*para paragrafos do tipo - */
 p1 {
 	color: var(--secoundary-color);
 	font-weight: 100;
@@ -66,23 +67,15 @@ h1 {
 	color: var(--quarternary-color);
 	text-align: left;
 	font-size: 70px;
-	margin: 0 0 42px 0;
+	margin: -24px 0 42px 0;
 }
 
 	/*para títulos do tipo - */
 h2 {
-	line-height: 0;
-	margin: 42px 0px 24px 0px;
+	margin: 24px 0px 12px 0px;
+	line-height: normal;
 	font-weight: 500;
 }
-
-h3 {
-	font-size: 32px;
-	font-weight: 300;
-	line-height: 24px;
-	margin: 0px 0px 28px 0px;
-}
-
 
 	/*para títulos do tipo - */
 h4 {
@@ -93,6 +86,37 @@ h4 {
 	margin: 0px 0px 10px 0px;
 }
 
+.Extra-Light {
+	font-weight: 100;
+}
+.Light {
+	font-weight: 200;
+}
+.Book {
+	font-weight: 300;
+}
+.Regular {
+	font-weight: 400;
+}
+.Medium {
+	font-weight: 500;
+}
+.Semi-Bold {
+	font-weight: 600;
+}
+.Bold {
+	font-weight: 700;
+}
+.Extra-Bold {
+	font-weight: 800;
+}
+.Black {
+	font-weight: 900;
+}
+
+.Green {
+	color: var(--quarternary-color);
+}
 
 .banner {
 	width: 100%;
